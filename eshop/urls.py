@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.views import homepage
+from costumerapp.views import costumer_view
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage),
-    # path('costumers/', costumer_view),
+    path('costumers/', costumer_view),
 ]
