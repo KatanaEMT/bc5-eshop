@@ -3,7 +3,7 @@
 <a href="{% url 'news-list' %}">Новости</a> |
 <a href="/admin/">Админка</a>
 
-<h1>Товары</h1>
-{% for product in products %}
-    <div>{{ product.id }}. {{ product.name }} - {{ product.price }} сом</div>
+<h1>Новости</h1>
+{% for obj in news %}
+    <div>{{ obj.title }}</div>
 {% endfor %}
