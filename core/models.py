@@ -17,6 +17,7 @@ class Product(models.Model):
     qty = models.IntegerField(default=0)
     costumer_views = models.ManyToManyField(
         to=Costumer,
+        blank=True,
 
     )
     category = models.ForeignKey(
@@ -25,6 +26,7 @@ class Product(models.Model):
         null=True, blank=True,
         verbose_name="Категория",
     )
+    views_qty = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name

@@ -5,12 +5,18 @@
 
 <h1>Товары</h1>
 {% for product in products %}
-    <div>{{ product.id }}. {{ product.name }} - {{ product.price }} сом.</div>
-    <div>Просмотры пользователей:</div>
-    <ul>
-        {% for customer in product.costumer_views.all %}
-    <div>{{ customer.name }}</div>
-    {% endfor %}
-    </ul>
+    <div>{{ product.id }}.
+        <a href="/product/{{ product.id }}/">{{ product.name }}</a>
+         - {{ product.price }} сом
+    </div>
 {% endfor %}
+
+{#    <div>{{ product.id }}. {{ product.name }} - {{ product.price }} сом.</div>#}
+{#    <div>Просмотры пользователей:</div>#}
+{#    <ul>#}
+{#        {% for customer in product.costumer_views.all %}#}
+{#    <div>{{ customer.name }}</div>#}
+{#    {% endfor %}#}
+{#    </ul>#}
+{#{% endfor %}#}
 
