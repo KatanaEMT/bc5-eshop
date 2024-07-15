@@ -9,11 +9,3 @@
 <div>{{ new.article }}</div>
 <div>Просмотры: {{ new.views_qty }}</div>
 <div>Уникальные просмотры: {{ new.costumer_views.count }}</div>
-{##}
-{#<h1>Новости</h1>#}
-{#{% for news in new %}#}
-{#    <div>{{ news.id }}.#}
-{#        <a href="/news/{{ news.id }}/">{{ news.title }}</a>#}
-{#            {{ news.category }}#}
-{#    </div>#}
-{#{% endfor %}#}

@@ -1,5 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from .models import *
+from costumerapp.models import *
+from django.contrib.auth.models import User
 
 
 def homepage(request):
@@ -10,6 +12,26 @@ def homepage(request):
     
     # return HttpResponse("Hello Django!")
     return render(request, 'index.html', context)
+
+
+def user_lst(request):
+    user_lst = User.objects.all()
+    context = {"user_lst": user_lst}
+    return render(request, 'user_lst.html', context)
+
+
+def user_detail(request, id):
+    user_info = User.objects.get(id=id)
+    context = {"user": user_info}
+    return render(request, 'user_detail.html', context)
+
+
+# def user_cabinet(request, id):
+#     user = User.objects.get(id=id)
+#     context = {"user": user}
+#     return render(request, 'cabinet.html', context)
+
+
 
 
 def product_detail(request, id):

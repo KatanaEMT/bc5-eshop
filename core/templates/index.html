@@ -1,7 +1,14 @@
 <a href="/">Главная</a> |
 <a href="/costumers/">Покупатели</a> |
 <a href="{% url 'news-list' %}">Новости</a> |
-<a href="/admin/">Админка</a>
+<a href="/admin/">Админка</a> |
+<a href="/user/">Пользователи</a> |
+
+<div>
+    <a href="/user/{{ request.user.id }}/">
+        {{ request.user }}
+    </a>
+</div>
 
 <h1>Товары</h1>
 {% for product in products %}
@@ -10,13 +17,4 @@
          - {{ product.price }} сом
     </div>
 {% endfor %}
-
-{#    <div>{{ product.id }}. {{ product.name }} - {{ product.price }} сом.</div>#}
-{#    <div>Просмотры пользователей:</div>#}
-{#    <ul>#}
-{#        {% for customer in product.costumer_views.all %}#}
-{#    <div>{{ customer.name }}</div>#}
-{#    {% endfor %}#}
-{#    </ul>#}
-{#{% endfor %}#}
 
