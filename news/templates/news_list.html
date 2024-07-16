@@ -1,11 +1,14 @@
-<a href="/">Главная</a> |
-<a href="/costumers/">Покупатели</a> |
-<a href="{% url 'news-list' %}">Новости</a> |
-<a href="/admin/">Админка</a>
+{% extends 'base.html' %}
+
+{% block content %}
 
 <h1>Новости</h1>
-{% for new in news %}
-    <div>{{ new.id }}.
-        <a href="/news/{{ new.id }}/">{{ new.title }}</a>
-    </div>
-{% endfor %}
+<ul>
+    {% for new in news %}
+        <li>
+            <a href="/news/{{ new.id }}/">{{ new.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

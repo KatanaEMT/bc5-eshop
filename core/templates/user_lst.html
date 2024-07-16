@@ -1,14 +1,16 @@
-<a href="/">Главная</a> |
-<a href="/costumers/">Покупатели</a> |
-<a href="{% url 'news-list' %}">Новости</a> |
-<a href="/admin/">Админка</a> |
-<a href="/user/">Пользователи</a> |
+{% extends 'base.html' %}
+
+{% block content %}
 
 
 <h1>Пользователи</h1>
+<ul>
 {% for user in user_lst %}
-    <div>{{ user.id }}.
+    <li>
         <a href="/user/{{ user.id }}/">{{ user.username }}</a>
-    </div>
+    </li>
 {% endfor %}
+</ul>
+
+{% endblock %}
 

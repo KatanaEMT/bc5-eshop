@@ -1,9 +1,14 @@
-<a href="/">Главная</a> |
-<a href="/costumers/">Покупатели</a> |
-<a href="{% url 'news-list' %}">Новости</a> |
-<a href="/admin/">Админка</a>
+{% extends 'base.html' %}
+
+{% block content %}
 
 <h1>Клиенты</h1>
+<ul>
 {% for costumer in costumer_list %}
-    <div>{{ costumer.name }}</div>
+    <li>
+        {{ costumer.name }}
+    </li>
 {% endfor %}
+</ul>
+
+{% endblock %}

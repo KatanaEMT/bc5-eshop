@@ -1,11 +1,10 @@
-<a href="/">Главная</a> |
-<a href="/costumers/">Покупатели</a> |
-<a href="{% url 'news-list' %}">Новости</a> |
-<a href="/admin/">Админка</a>
-
+{% extends "base.html" %}
+{% block content %}
 
 <h1>{{ new.title }}</h1>
 <div>{{ new.category }}</div>
 <div>{{ new.article }}</div>
 <div>Просмотры: {{ new.views_qty }}</div>
 <div>Уникальные просмотры: {{ new.costumer_views.count }}</div>
+
+{% endblock %}

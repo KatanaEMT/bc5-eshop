@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.views import *
+from django.conf import settings  # 1
+from django.conf.urls.static import static
 from costumerapp.views import costumer_view
 from news.views import *
 
@@ -29,4 +31,4 @@ urlpatterns = [
     path('costumers/', costumer_view),
     path('news/', news_list, name='news-list'),
     path('news/<int:id>/', news_detail),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
