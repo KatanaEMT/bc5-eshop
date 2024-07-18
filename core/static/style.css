@@ -1,3 +1,102 @@
 nav {
     background-color: black;
+    color: #eee;
+    padding: 10px 0 10px 5px;
+    box-sizing: border-box;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eee;
+    margin-right: 10px;
+}
+
+/* nav a:hover {
+    background-color: darkblue;
+} */
+
+.cabinet-link {
+    background-color: aqua;
+    border: 1px solid aqua;
+    border-radius: 6px;
+    width: 100px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.cabinet-link a {
+    color: black;
+    text-decoration: none;
+}
+
+.bg-primary {
+    background-color: rgb(6 62 144) !important;
+}
+
+.news-list {
+    gap: 5px;
+}
+
+.cards {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.card_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+
+.card_title {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+
+.card_descr {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+
+.card_btn {
+    margin-top: auto;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+
+.cards_item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.cards_item .card {
+    height: 100%;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: #bfbfbf;
+}
+
+.card_image {
+    height: 150px;
+}
+
+.card_image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }

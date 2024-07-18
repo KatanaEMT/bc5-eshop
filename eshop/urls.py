@@ -30,5 +30,5 @@ urlpatterns = [
     path('product/<int:id>/', product_detail, name='product-detail'),
     path('costumers/', costumer_view),
     path('news/', news_list, name='news-list'),
-    path('news/<int:id>/', news_detail),
+    path('news/<int:id>/', news_detail, name='news-detail'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

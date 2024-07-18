@@ -2,12 +2,22 @@
 
 {% block content %}
 
-
 <h1>Пользователи</h1>
-<ul>
+<ul class="cards">
 {% for user in user_lst %}
-    <li>
-        <a href="/user/{{ user.id }}/">{{ user.username }}</a>
+    <li class="cards_item">
+        <article class="card">
+            <div class="card_image">
+                <img src="https://tlgrm.ru/_/stickers/187/62d/18762d68-0938-4cb4-9625-95b904084ab7/2.webp" alt="Дед смеется">
+            </div>
+            <div class="card_content">
+                <h2 class="card_title">Логин: {{ user }}</h2>
+                <p class="card_descr">
+                Имя: {{ user.first_name }}
+                </p>
+                <button class="card_btn">Нажми!</button>
+            </div>
+        </article>
     </li>
 {% endfor %}
 </ul>

@@ -3,12 +3,12 @@
 {% block content %}
 
 <h1>Новости</h1>
-<ul>
-    {% for new in news %}
-        <li>
-            <a href="/news/{{ new.id }}/">{{ new.title }}</a>
-        </li>
+<div class="row news-list">
+    {% for obj in news %}
+        <div class="p-5 bg-warning rounded col-lg-3 col-md-5 col-sm-12">
+            <a href="/new-detail/{{ obj.id }}/">{{ obj.title }}</a>
+        </div>
     {% endfor %}
-</ul>
+</div>
 
 {% endblock %}

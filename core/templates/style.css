@@ -24,3 +24,30 @@ nav a {
     color: white;
     text-decoration: none;
 }
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-detail {
+    width: 100%;
+    height: 100vh;
+
+    background:
+    url("../templates/imght.jpg") center
+    no-repeat;
+    background-size: cover;
+
+}
+
+.intro {
+    width: 100%;
+    height: 100vh;
+
+    background:
+    url("../templates/imght.jpg") center
+    no-repeat;
+    background-size: cover;
+}
