@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+
+<form method="POST">
+    {% csrf_token %}
+    <h2>Добавить профиль</h2>
+    <p>
+        <textarea name="new_bio" cols="30" rows="10" placeholder="Ваша автобиография"></textarea>
+    </p>
+        <input type="number" name="new_phone_number" placeholder="Номер телефона">
+    </p>
+        <input name="new_social_link" placeholder="Ваши соцсети">
+    </p>
+{#        <input name="new_user" placeholder="Логин">#}
+{#    </p>#}
+    <button>Добавить</button>
+</form>
+
+
+{% endblock %}

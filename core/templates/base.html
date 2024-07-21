@@ -14,8 +14,13 @@
     <nav>
         <a href="/">Главная</a>
         <a href="/costumers/">Покупатели</a>
+        <a href="{% url 'product-create' %}">Добавить</a>
         <a href="{% url 'news-list' %}">Новости</a>
         <a href="/user/">Пользователи</a>
+        <a href="{% url 'new-create' %}">Добавить новость</a>
+        <a href="{% url 'costumers-create' %}">Добавить Пользователя</a>
+        <a href="/profile/">Профиль пользователей</a>
+        <a href="{% url 'profile-create' %}">Добавить профиль</a>
         <a href="/admin/">Админка</a>
     </nav>
 

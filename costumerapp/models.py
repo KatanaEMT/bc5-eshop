@@ -22,6 +22,11 @@ class Costumer(models.Model):
         on_delete=models.SET_NULL,
         null=True, blank=True
     )
+    profile = models.OneToOneField(
+        to=Profile,
+        on_delete=models.SET_NULL,
+        null=True, blank=True
+    )
 
     def __str__(self):
         return self.name

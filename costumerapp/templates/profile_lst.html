@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Профиль</h1>
+    {% for obj in profile %}
+        <div>
+            <a href="/profile/{{ obj.id }}/">{{ obj.user }}</a>
+        </div>
+    {% endfor %}
+
+{% endblock %}

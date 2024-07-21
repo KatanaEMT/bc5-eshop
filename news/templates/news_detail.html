@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Страница одной новости</h1>
+<h2>{{ new.title }}</h2>
+    <p>
+<h2>Категория: {{ new.category }}</h2>
+</p>
+<div>{{ new.article }}</div>
+<div>Просмотры: {{ new.views }}</div>
+
+
+{% endblock %}

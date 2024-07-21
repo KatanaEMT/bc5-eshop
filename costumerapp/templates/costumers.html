@@ -9,6 +9,7 @@
             <th>Имя</th>
             <th>Возраст</th>
             <th>Пол</th>
+            <th>Соц-сети</th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@
                 <td>{{ costumer }}</td>
                 <td>{{ costumer.age }}</td>
                 <td>{{ costumer.gender }}</td>
+                <td>{{ costumer.profile.social_link }}</td>
             </tr>
         {% endfor %}
     </tbody>

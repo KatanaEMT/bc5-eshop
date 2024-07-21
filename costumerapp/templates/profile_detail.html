@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Твой профиль</h1>
+<div>name: {{ profile.costumer.name }}</div>
+<div>BIO: {{ profile.bio }}</div>
+<div>Social Link: {{ profile.social_link }}</div>
+<div>Number Phone: {{ profile.phone_number }}</div>
+
+{% endblock %}
